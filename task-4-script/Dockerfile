@@ -1,4 +1,7 @@
 FROM alpine:latest
-WORKDIR /app
-COPY message.txt /app/message.txt
-CMD ["cat", "/app/message.txt"]
+
+
+COPY script.sh .
+RUN chmod +x script.sh
+RUN chmod +x script.sh
+CMD ["./script.sh"]
