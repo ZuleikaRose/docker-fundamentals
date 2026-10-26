@@ -173,9 +173,9 @@ At minimum, you should demonstrate:
 
 You should be able to answer the following by the end:
 
-* Why don’t stopped containers appear with `docker ps`?
-* Why can’t an image be deleted if a container depends on it?
-* What does the `--rm` flag prevent?
+* Why don’t stopped containers appear with `docker ps`? By default, the `docker ps` command is  **designed to filter the output to show only actively running containers** . When a container stops or exits, its process terminates, and  =Docker excludes it from the default list to keep your active workspace clean= .
+* Why can’t an image be deleted if a container depends on it? An Docker image cannot be deleted if a container depends on it because  =**the container relies on the image's read-only file system layers to exist and function**= .
+* What does the `--rm` flag prevent? The `--rm` flag in Docker prevents  =exited containers from persisting on the host system= .
 
 ---
 
