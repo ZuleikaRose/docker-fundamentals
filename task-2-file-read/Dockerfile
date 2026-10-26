@@ -1,2 +1,4 @@
 FROM alpine:latest
-CMD ["echo", "hello world!"]
+WORKDIR /app
+COPY message.txt .
+CMD ["cat", "message.txt"]
